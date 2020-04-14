@@ -38,13 +38,10 @@
    border-radius: 20px;
    margin-top:10px; 
    border: 1px solid black;
-  }
-  .main img[name="logo"]{
-   position: absolute;
-   top:155px;
-   left: 80%;
-   height: 40px;
-    width: 10%;
+   background-image:url("searchlogo.png");
+   background-repeat:no-repeat;
+   background-size:30%;
+   background-position: right;
   }
   .main img[name="google"]{
    width: 100%;
@@ -79,12 +76,14 @@
    .main img[name="google"]{
    width: 50%;
    height:126px
-  }
+  } 
     .sec{
      position: absolute;
      right:10px;
      top:40px;
     }
+    .main input[type="search"]{
+    background-size:10%;}
   }
  </style>
  </head>
@@ -96,8 +95,6 @@
 <img name="google" src="googlelogo.png" alt="logo"/>
  <br>
  <input type="search" />
- <br>
-<img name="logo" src="searchlogo.png"> 
  <br>
 <div> <button>Google search</button><button>i am feeling lucky</button></div>
   <br>
