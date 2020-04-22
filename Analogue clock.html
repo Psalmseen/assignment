@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>trial of analogue clock</title>
+<script>
+window.onload=time();
+function time(){
+var today= new Date();// open new date object
+var mm=today.getMilliseconds();
+var s=today.getSeconds();
+var m=today.getMinutes();
+var h=today.getHours();
+t = setTimeout(time, 1);
+var g=(s+(mm/1000))*6;
+var i=(m+(g/360))*6;
+var k=(h<12)?((h+(i/360))*30): (((h-12)+(i/360))*30);
+var f='rotate('+g+'deg)';
+var j='rotate('+i+'deg)';
+var l='rotate('+k+'deg)';
+document.getElementById("turns").style.transform=f;
+document.getElementById("turnm").style.transform=j;
+document.getElementById("turnh").style.transform=l;
+}
+</script>
+<style>
+/*.frame:before{
+content:"";
+width:72vw;
+height:72vw;
+border: 1vw solid black;
+display:inline-block;}*/
+
+.frame{
+/*background-image: linear-gradient(red,green, blue);
+background-image: url(photo/webimage4.png);*/
+background-image:repeating-conic-gradient(aqua 15%,blue 30%);
+background-size:4vw 4vw;
+background-position:;
+width: 70vw;
+height: 70vw;
+
+border: 1vw solid green;
+border-image:repeating-radial-gradient( ellipse, red, orange, yellow, green, blue, indigo, violet 20%) 1;
+ 
+border-radius:50%;}
+#turns{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transform: rotate(0deg);
+position:relative;
+top:-130vw;
+}
+
+#turnm{
+position:relative;
+top:-65vw;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transform:rotate(0deg);
+
+}
+#turnh{
+position:relative;
+top:0vw;
+display:flex;
+flex-direction:column;
+justify-content: center;
+align-items:center;
+transform:rotate(0deg);
+height:70vw;
+}
+
+.secH{
+width:1vw;
+height:35vw;
+background:red;
+border-radius:0.5vw/30vw 30vw 5vw 5vw;
+transform: rotate(0deg);
+z-index:25;
+}
+.Hsec{
+width:5vw;
+height:35vw;
+
+}
+.minH{
+width:2vw;
+height:30vw;
+background:black;
+border-radius:1vw/25vw 25vw 5vw 5vw;
+}
+.Hmin{
+width:5vw;
+height:30vw;
+
+}
+.houH{
+width:3vw;
+height:20vw;
+background:black;
+border-radius:1.5vw/17vw 17vw 3vw 3vw;
+z-index:1;
+}
+.Hhou{
+width:3vw;
+height:20vw;
+}
+.twelf{
+font-size:10vw;
+font-weight:bold;
+color:gold;
+position:absolute;
+top:2vw;
+left:45vw;
+}
+.three{
+font-size:10vw;
+font-weight:bold;
+color:gold;
+position:absolute;
+left:80vw;
+top:34vw;
+}
+.nine{
+font-size:10vw;
+font-weight:bold;
+color:gold;
+position:absolute;
+top:34vw;
+left:15vw;
+}
+.six{
+font-size:10vw;
+font-weight:bold;
+color:gold;
+position:absolute;
+top:63vw;
+left:47vw;
+}
+
+</style>
+</head>
+<body>
+<center>
+<div class="frame">
+<span class="twelf">12</span>
+<span class="three">3</span>
+<span class="nine">9</span>
+<span class="six">6</span>
+<div id="turnh"> 
+<div class="houH"></div>
+<div class="Hhou"></div>
+</div>
+<div id="turnm"> 
+<div class="minH"></div>
+<div class="Hmin"></div>
+</div>
+<div id="turns"> 
+<div class="secH"></div>
+<div class="Hsec"></div>
+</div>
+</div>
+</center>
+</body>
+</html>
