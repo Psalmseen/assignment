@@ -24,6 +24,16 @@ document.getElementById("turnh").style.transform=l;
 }
 </script>
 <style>
+.central{
+display:flex;
+justify-content:center;
+align-items:center;
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+}
 /*.frame:before{
 content:"";
 width:72vw;
@@ -34,7 +44,7 @@ display:inline-block;}*/
 .frame{
 /*background-image: linear-gradient(red,green, blue);
 background-image: url(photo/webimage4.png);*/
-background-image:repeating-conic-gradient(aqua 15%,blue 30%);
+background-image:repeating-conic-gradient(aqua 0 1%,blue 0 2%);
 background-size:4vw 4vw;
 background-position:;
 width: 70vw;
@@ -51,12 +61,12 @@ justify-content:center;
 align-items:center;
 transform: rotate(0deg);
 position:relative;
-top:-130vw;
+top:-141.5vw;
 }
 
 #turnm{
 position:relative;
-top:-65vw;
+top:-76vw;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -66,7 +76,7 @@ transform:rotate(0deg);
 }
 #turnh{
 position:relative;
-top:0vw;
+top:-11vw;
 display:flex;
 flex-direction:column;
 justify-content: center;
@@ -114,39 +124,39 @@ height:20vw;
 font-size:10vw;
 font-weight:bold;
 color:gold;
-position:absolute;
-top:2vw;
-left:45vw;
+position:relative;
+top:-2vw;
+left:30vw;
 }
 .three{
 font-size:10vw;
 font-weight:bold;
 color:gold;
-position:absolute;
-left:80vw;
-top:34vw;
+position:relative;
+left:52vw;
+top:30vw;
 }
 .nine{
 font-size:10vw;
 font-weight:bold;
 color:gold;
-position:absolute;
-top:34vw;
-left:15vw;
+position:relative;
+top:30vw;
+left:-19vw;
 }
 .six{
 font-size:10vw;
 font-weight:bold;
 color:gold;
-position:absolute;
-top:63vw;
-left:47vw;
+position:relative;
+top:60vw;
+left:07vw;
 }
 
 </style>
 </head>
 <body>
-<center>
+<div class="central">
 <div class="frame">
 <span class="twelf">12</span>
 <span class="three">3</span>
@@ -165,6 +175,6 @@ left:47vw;
 <div class="Hsec"></div>
 </div>
 </div>
-</center>
+</div>
 </body>
 </html>
