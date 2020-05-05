@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Home Page</title>
+<link rel="stylesheet" href="Exam-style.css" />
+<script>
+function start(){
+var name=document.getElementById("name").value;
+localStorage.setItem("name", name);
+var subject=document.getElementById("subject").value;
+switch(subject){
+ case "English": window.open("English Question.html", "_self"); break;
+ case "Mathematics":window.open("Mathematics question.html", "_self"); break;
+ case "Physics":window.open("Physics question.html", "_self"); break;
+ case "Chemistry":window.open("Chemistry question.html", "_self"); break;
+ case "Biology":window.open("Biology question.html", "_self"); break;
+ case "Economics":window.open("Economics question.html", "_self"); break;
+ case "Civic":window.open("Civic question.html", "_self"); break;
+ case "Government":window.open("Government question.html", "_self"); break;
+ case "Litrature":window.open("Literature question.html", "_self"); break;
+ case "":window.open(" question.html", "_self"); break;
+ default:alert("Select a Subject");
+ }
+//alert(name);
+}
+</script>
+</head>
+<body>
+<div class="body">
+<div class="header">
+<p class="com-name">samson educational resources</p> 
+</div>
+<div class="content-body">
+<div class="main" style="text-transform:capitalize;" align="center">
+<p > Welcome To <br><span class="com-name" style="text-decoration:none;">samson educational resources</span></p>
+<p> Enter Your name<br><input type="text" id="name" /></p>
+ <p>Select a subject you would like to take a test on:<br>
+   <select id="subject">
+   <option hidden >--Select Subject--</option>
+   <option hidden value="English">English Language</option>
+   <option  value="Mathematics"> Mathematics</option>
+   <option hidden value="Physics">Physics </option>
+   <option hidden value="Chemistry">Chemistry </option>
+   <option hidden value="Biology">Biology</option>
+   <option hidden value="Economics">Economics </option>
+   <option hidden value="Civic">Civic Education</option>
+   <option hidden value="Government">Government</option>
+   <option hidden value="literature">Literature in English </option>
+   </select>
+   </p>
+   <p> all subject contain 50 questions and have its allocated time<br>
+       Make sure you submit before the clock hit zero.</p>
+       <b>GOOD LUCK</b>
+<p  ><button onclick="start()">Start Test</button></p>
+</div>
+</div>
+<div class="footer">
+<i>Powered by Psalmseen<br>&copy; 2020</i>
+</div>
+</div>
+</body>
+</html>
