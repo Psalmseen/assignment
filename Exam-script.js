@@ -31,7 +31,11 @@ function ans(){
          window.open("Result page.html", "_self");   }
  function duration(min){
 window.onload=setTimeout(ans, min*60000);
-window.onload=timer(min);}
+window.onload=timer(min);
+if (window.performance.navigation.type == 1){
+window.open("Homepage.html", "_self")
+}//this checks for reload and goes back to homepage
+}
 
 
 
